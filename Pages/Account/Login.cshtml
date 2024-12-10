@@ -1,0 +1,36 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<h1 class="text-success text-center">
+        @ViewData["Title"]
+    </h1>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Credential.UserName">
+                                </label>
+                                <input type="text" class="form-control" asp-for="Credential.UserName"/>
+                                <span class="text-danger" asp-validation-for="Credential.UserName"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Credential.Password"></label>
+                                <input type="password" 
+                                       class="form-control" asp-for="Credential.Password"/>
+                                       <span class="text-danger" asp-validation-for="Credential.Password"></span>
+                            </div>
+                            <button class="btn btn-danger" type="submit">
+                                Login
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

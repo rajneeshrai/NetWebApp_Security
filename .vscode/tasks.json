@@ -1,0 +1,38 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "markdownlint",
+			"problemMatcher": [
+				"$markdownlint"
+			],
+			"label": "markdownlint: Lint all Markdown files in the workspace with markdownlint",
+			"group": "build"
+		},
+		{
+			"type": "dotnet",
+			"task": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "dotnet: build"
+		},
+		{
+			"type": "dotnet",
+			"task": "watch NetWebApp_Security",
+			"file": "H:\\my-repos\\Azure\\asp.net-identity\\NetWebApp_Security\\NetWebApp_Security.csproj",
+			"problemMatcher": [],
+			"label": "dotnet: watch NetWebApp_Security",
+			"group": "build"
+		},
+		{
+			"type": "dotnet",
+			"task": "clean",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "dotnet: clean"
+		}
+	]
+}
